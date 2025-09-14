@@ -45,6 +45,6 @@ jobs:
         # Si tu proyecto no requiere build, puedes eliminar este paso
 
       - name: Publish to Cloudflare Workers
-        run: pnpm exec wrangler deploy
+        run: pnpm exec wrangler deploy --config wrangler.jsonc
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
